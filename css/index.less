@@ -1,0 +1,139 @@
+// 文件引入
+@import 'mixins/clear.less';
+// 最外层的包裹元素
+#wrapper {
+
+   // 头部开始
+    #header {
+
+        // 上面部分
+        .headTop {
+            background-color: #eaeaea;
+            height: 30px;
+
+            // 版心元素
+            .headTopMain {
+                width: 1200px;
+                margin: 0 auto;
+                line-height: 30px;
+                // overflow: hidden; // 1.解决子元素浮动后，父元素高度塌陷的问题
+                 .clearfix();
+                // 左侧（左浮动）
+                .left {
+                    float: left;
+
+                    h5 {
+                        float: left;
+                        margin-right: 5px;
+                    }
+
+                    p {
+                        float: left;
+
+                        a {
+                            &:first-child {
+                                border-right: 1px solid #b3aeae;
+                                padding-right: 5px;
+                            }
+                        }
+                    }
+                  }
+                  // 右侧（右侧浮动）
+                 .right {
+                      float: right;
+                       nav{
+                        font-size: 0px;
+                        a{
+                          margin-right: 10px;
+                          font-size: 12px;
+                          padding-right: 10px;
+                          border-right: 1px solid #baaeba;
+                          &:last-child{
+                            border: none;
+                            margin-right: 0;
+                            padding-right: 0 ;
+                          }
+                        }
+                       }
+                     }
+            }
+          }    
+          // 下边部分
+          .headBottom {
+            .headBottomMain {
+              width: 1200px;
+              margin: 0 auto ;
+              .clearfix();
+              .logo{
+                float: left;
+                a{
+                  img{
+                    width: 175px;
+                    height: 56px;
+                    margin: 25px 45px;
+                  }
+                }
+              }
+              // 搜索框
+              .search{
+                float: right;
+                margin-top: 35px;
+                input{
+                  &:first-child {
+                    box-sizing: border-box;
+                    width: 490px;
+                    height: 32px;
+                    padding: 0 4px;
+                    border: 3px solid #ea4a36;
+                    float: left;
+                }
+                // 提交按钮
+                &:last-child{
+                  width: 68px;
+                  height: 32px;
+                  color: #fff;
+                  background: #ea4a36;
+                  border: none;
+                }
+                         // 修饰placeholder
+                              &::placeholder {
+                              color: yellowgreen;
+              }
+          }
+      }
+  }
+}
+}
+        
+        // 头部结束
+             
+        // 分类导航开始
+        #navWrap {
+          border-bottom: 2px solid #e1251b;
+  
+                //  版心元素   
+                .navWrapMain {
+                  width: 1200px;
+                  margin: 0 auto;
+                  .clearfix();
+                  a {
+                    margin: 0 22px;
+                    font-size: 16px;
+                    color: #333;
+                    float: left;
+                    line-height: 50px;
+                    text-align: center;
+                      &:first-child {
+                        width: 210px;
+                        height: 50px;
+                        background-color: #e1251b;
+                        color: #fff;
+                        font-size: 14px;
+                        font-weight: bold;
+                      }
+                    }
+                }     
+        // 分类导航结束
+      }
+    }
+  
