@@ -115,3 +115,18 @@
   font-size: 14px;
   font-weight: bold;
 }
+#wrapper #content {
+  width: 1200px;
+  margin: 15px auto 0 auto;
+}
+#wrapper #navPath {
+  padding: 9px 15px 9px 0;
+  font-size: 0px;
+}
+#wrapper #navPath a {
+  font-size: 12px;
+}
+#wrapper #navPath i {
+  padding: 0 5px;
+  font-size: 12px;
+}
